@@ -5,12 +5,18 @@ using UnityEngine;
 [System.Serializable]
 public struct task
 {
-    public string name;
+    public string TaskName;
     public Pranckable prank;
+}
+[System.Serializable]
+public struct mission
+{
+    public string MissionName;
+    public task[] tasks;
 }
 public class GameManager : MonoBehaviour
 {
-    public List<task> mission;
+    public List<mission> mission;
     public static GameManager This;
 
     private void Awake()

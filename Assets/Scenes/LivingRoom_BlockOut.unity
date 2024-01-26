@@ -2381,8 +2381,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 97180803}
   - {fileID: 1134667109}
+  - {fileID: 97180803}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &776939174
@@ -4843,10 +4843,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mission:
-  - name: OpenWindow
-    prank: {fileID: 232266433}
-  - name: Sit On Soufa
-    prank: {fileID: 776939174}
+  - MissionName: Window Prank Mission
+    tasks:
+    - TaskName: Window
+      prank: {fileID: 232266433}
+    - TaskName: Return to Sofa
+      prank: {fileID: 0}
+  - MissionName: 
+    tasks: []
 --- !u!4 &1679024798
 Transform:
   m_ObjectHideFlags: 0
@@ -5329,8 +5333,6 @@ GameObject:
   - component: {fileID: 1945391189}
   - component: {fileID: 1945391188}
   - component: {fileID: 1945391187}
-  - component: {fileID: 1945391193}
-  - component: {fileID: 1945391192}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -5355,8 +5357,7 @@ MonoBehaviour:
   EventList:
   - {fileID: 11400000, guid: 45a57067ec95f6c44932e8126449ffd6, type: 2}
   - {fileID: 11400000, guid: 60d775a32f4d1e244893e2f0e1bef6f3, type: 2}
-  moveTask: {fileID: 1945391193}
-  interactTask: {fileID: 1945391192}
+  speed: 10
 --- !u!136 &1945391188
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5445,35 +5446,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1945391192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945391186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab8224b0d5314d4f80ac7dec0aa08ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  prank: {fileID: 0}
---- !u!114 &1945391193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945391186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 906536ab2d50d374bb2fb75aeaf49a6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 0
-  speed: 100
-  Destination: {x: 0, y: 0, z: 0}
 --- !u!1 &1950783569
 GameObject:
   m_ObjectHideFlags: 0

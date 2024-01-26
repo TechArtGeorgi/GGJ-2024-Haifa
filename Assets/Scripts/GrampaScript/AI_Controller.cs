@@ -16,17 +16,25 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
     [SerializeField] private Pranckable coutchPrank;
     [SerializeField] private tasks task = tasks.Idle;
     [SerializeField] private List<GameEvent> EventList;
-    [SerializeField] private Move moveTask;
-    [SerializeField] private Interact interactTask;
+    [SerializeField] private Move moveTask = new Move();
+    [SerializeField] private Interact interactTask = new Interact();
+
+    [Header("Movement")]
+    [SerializeField] private float speed = 1.0f;
+    private Context context;
 
 
 
     void OnEnable()
     {
+        context = Context.CreateFromGameObject(this.gameObject);
         foreach (var a in EventList)
         {
             a.AddListener(this);
         }
+        moveTask.context = context;
+        moveTask.speed = speed;
+        interactTask.context = context;
     }
     void OnDisable()
     {
@@ -38,8 +46,8 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
     public void OnEventRaise(prank log)
     {
         task = tasks.Move;
-        moveTask.Destination = log.gameEvent.position;
-        interactTask.prank = GameManager.This.mission[log.index].prank;
+        //moveTask.Destination = log.gameEvent.position;
+        //interactTask.prank = GameManager.This.mission[log.index].prank;  
     }
 
     void Update()

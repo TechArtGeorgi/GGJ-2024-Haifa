@@ -15,3 +15,4 @@ MonoBehaviour:
   log:
     index: 1
     gameEvent: {fileID: 11400000}
+  position: {x: -32.186962, y: 0, z: 58.37642}
