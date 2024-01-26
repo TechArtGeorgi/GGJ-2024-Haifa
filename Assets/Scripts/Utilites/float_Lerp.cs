@@ -72,8 +72,8 @@ namespace lerpers
         }
         public Vector3 UpdateTimer(float amout)
         {
-            timer.SubtractTimerByValue(amout);
-            return Vector3.LerpUnclamped(start, end, curve.Evaluate(timer.GetCurrentTime()));
+                timer.SubtractTimerByValue(amout);
+                return Vector3.LerpUnclamped(start, end, curve.Evaluate(timer.GetCurrentTime()));
         }
     }
 }

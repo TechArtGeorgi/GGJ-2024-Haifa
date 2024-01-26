@@ -1,9 +1,23 @@
 using UnityEngine;
 using UnityEditor;
-using ScriptableObjects;
 
-[CustomEditor(typeof(GameEvent))]
-public class GameEventEditor : Editor
+/*public class PranckableEditor : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}*/
+
+[CustomEditor(typeof(Pranckable))]
+public class PranckableEditor : Editor
 {
     private void OnEnable()
     {
@@ -20,20 +34,20 @@ public class GameEventEditor : Editor
     private void OnSceneGUI(SceneView sceneView)
     {
         // Ensure the target is a GameEvent
-        if (target is GameEvent gameEvent)
+        if (target is Pranckable pranckable)
         {
             // Draw a wire sphere gizmo at the specified position
             Handles.color = Color.yellow;
-            Handles.DrawWireDisc(gameEvent.position, Vector3.up, 1f);
+            Handles.DrawWireDisc(pranckable.position, Vector3.up, 1f);
 
             // Allow the user to modify the position using handles
             EditorGUI.BeginChangeCheck();
-            Vector3 newPosition = Handles.PositionHandle(gameEvent.position, Quaternion.identity);
+            Vector3 newPosition = Handles.PositionHandle(pranckable.position, Quaternion.identity);
             if (EditorGUI.EndChangeCheck())
             {
                 // If the position has changed, update the GameEvent's position
-                Undo.RecordObject(gameEvent, "Change GameEvent Position");
-                gameEvent.position = newPosition;
+                Undo.RecordObject(pranckable, "Change GameEvent Position");
+                pranckable.position = newPosition;
             }
         }
     }
@@ -44,32 +58,16 @@ public class GameEventEditor : Editor
         DrawDefaultInspector();
 
         // Ensure the target is a GameEvent
-        if (target is GameEvent gameEvent)
+        if (target is Pranckable pranckable)
         {
             // Draw a button to reset the position to (0, 0, 0)
             if (GUILayout.Button("Reset Position"))
             {
-                Undo.RecordObject(gameEvent, "Reset GameEvent Position");
-                gameEvent.position = Vector3.zero;
-            }
-            if (GUILayout.Button("Debug"))
-            {
-                gameEvent.Invoke();
+                Undo.RecordObject(pranckable, "Reset GameEvent Position");
+                pranckable.position = Vector3.zero;
             }
         }
     }
 }
-//[CustomEditor(typeof(GameEvent))]
-/*public class GameEventCustomEditor : Editor
-{
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-        GameEvent ge = (GameEvent)target;
-        if (GUILayout.Button("Invoke"))
-        {
-            ge.Invoke();
-        }
-    }
-}*/
+
 
