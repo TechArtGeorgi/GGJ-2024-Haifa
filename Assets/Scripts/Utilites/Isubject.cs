@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public abstract class Isubject<T> : MonoBehaviour
+public class Isubject<T> : MonoBehaviour
 {
     [SerializeField] protected UnityEvent<T> Listeners;
     //protected List<IObserver<T>> Listeners = new List<IObserver<T>>();
@@ -25,10 +25,6 @@ public abstract class Isubject<T> : MonoBehaviour
     protected void Invoke()
     {
         Listeners.Invoke(log);
-        /*foreach(IObserver<T> a in Listeners)
-        {
-            a.Invoke(log);
-        }*/
     }
 }
 

@@ -59,7 +59,7 @@ namespace Utilities
             }
         }*/
 
-        private void PlayScaleInAnimation() // FOR OBJECT PRESS
+        public void PlayScaleInAnimation() // FOR OBJECT PRESS
         {
             transform.DOScale(_targetScale, _scaleDuration).OnComplete(() =>
             {
@@ -71,12 +71,12 @@ namespace Utilities
             });
         }
 
-        private void OnMouseEnterAnimation() // FOR OBJECT MOUSE ENTER
+        public void OnMouseEnterAnimation() // FOR OBJECT MOUSE ENTER
         {
             transform.DOScale(_targetScale, _scaleDuration);
         }
-        
-        private void OnMouseExitAnimation() // FOR OBJECT MOUSE EXIT
+
+        public void OnMouseExitAnimation() // FOR OBJECT MOUSE EXIT
         {
             transform.DOScale(new Vector3(0.90f, 0.90f, 0.90f),0.15f).OnComplete(() =>
             {
