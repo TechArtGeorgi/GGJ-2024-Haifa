@@ -11,7 +11,7 @@ public class GameEventCustomEditor : Editor
         GameEvent ge = (GameEvent)target;
         if (GUILayout.Button("Invoke"))
         {
-            ge.Raise();
+            ge.Invoke();
         }
     }
 }
