@@ -16,6 +16,8 @@ namespace ScriptableObjects
     public class GameEvent : ScriptableObject
     {
         [SerializeField] private prank log;
+        [SerializeField] public Vector3 position;
+
         private List<GameEventListener<prank>> listeners = new List<GameEventListener<prank>>();
 
         public void Invoke()

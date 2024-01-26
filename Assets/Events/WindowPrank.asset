@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   log:
     index: 0
-    gameEvent: {fileID: 0}
+    gameEvent: {fileID: 11400000}

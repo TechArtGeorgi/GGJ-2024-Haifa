@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SofaPrank
   m_EditorClassIdentifier: 
   log:
-    index: 0
+    index: 1
     gameEvent: {fileID: 11400000}

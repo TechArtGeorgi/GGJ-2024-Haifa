@@ -38,7 +38,7 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
     public void OnEventRaise(prank log)
     {
         task = tasks.Move;
-        moveTask.Destination = GameManager.This.mission[log.index].prank.point.transform.position;
+        moveTask.Destination = log.gameEvent.position;
         interactTask.prank = GameManager.This.mission[log.index].prank;
     }
 
