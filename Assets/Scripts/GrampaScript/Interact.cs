@@ -5,6 +5,7 @@ using UnityEngine;
 public class Interact : Task
 {
     [SerializeField] public Pranckable prank;
+    SmartSwitch stateSwitch;
     protected override void OnStart()
     {
         prank.interacked();
@@ -17,6 +18,11 @@ public class Interact : Task
 
     protected override State OnUpdate()
     {
-          return State.Success;
+        stateSwitch.Update(prank.IsActive());
+        if(stateSwitch.OnRelese())
+        {
+            return State.Success;
+        }
+        return State.Running;
     }
 }

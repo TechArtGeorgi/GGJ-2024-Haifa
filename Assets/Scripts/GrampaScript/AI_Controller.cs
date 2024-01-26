@@ -11,13 +11,16 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
     { 
         Idle,
         Move,
-        Interact
+        Interact,
+        Rapit
     }
     [SerializeField] private Pranckable coutchPrank;
     [SerializeField] private tasks task = tasks.Idle;
     [SerializeField] private List<GameEvent> EventList;
     [SerializeField] private Move moveTask = new Move();
     [SerializeField] private Interact interactTask = new Interact();
+    [SerializeField] private int curMission = 0;
+    [SerializeField] private int count = 0;
 
     [Header("Movement")]
     [SerializeField] private float speed = 1.0f;
@@ -45,9 +48,11 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
     }
     public void OnEventRaise(prank log)
     {
+        count = 0;
+        curMission = log.index;
         task = tasks.Move;
-        //moveTask.Destination = log.gameEvent.position;
-        //interactTask.prank = GameManager.This.mission[log.index].prank;  
+        moveTask.Destination = GameManager.This.mission[curMission].tasks[count].prank.position;
+        interactTask.prank = GameManager.This.mission[curMission].tasks[count].prank;  
     }
 
     void Update()
@@ -65,6 +70,22 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
                 if (interactTask.eUpdate() != Task.State.Running)
                 {
 
+                    task = tasks.Rapit;
+                }
+                break;
+            case tasks.Rapit:
+                if(count < GameManager.This.mission[curMission].tasks.Length)
+                {
+                    
+                    task = tasks.Move;
+                    moveTask.Destination = GameManager.This.mission[curMission].tasks[count].prank.position;
+                    interactTask.prank = GameManager.This.mission[curMission].tasks[count].prank;
+                    count++;
+
+                }
+                else
+                {
+                    count = 0;
                     task = tasks.Idle;
                 }
                 break;
