@@ -6388,6 +6388,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8107692685397555509, guid: fd30846d3811797418457b7744181cd4, type: 3}
+      propertyPath: MainTheme
+      value: 
+      objectReference: {fileID: 11400000, guid: c056ecfce115c0043b36e9ba0cb81d7f, type: 2}
+    - target: {fileID: 8107692685397555509, guid: fd30846d3811797418457b7744181cd4, type: 3}
       propertyPath: mission.Array.size
       value: 1
       objectReference: {fileID: 0}

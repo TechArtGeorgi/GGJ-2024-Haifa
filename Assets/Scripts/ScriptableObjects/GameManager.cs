@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjects;
 
 [System.Serializable]
 public struct task
@@ -27,9 +28,12 @@ public class GameManager : MonoBehaviour
     [Header("Squances")]
     public List<Squance> Squances;
     public static GameManager This;
-
+    public GameObject OldMan;
+    public SoundEffectSO MainTheme;
     private void Awake()
     {
+        OldMan = GameObject.FindGameObjectWithTag("Player");
+        MainTheme.Play();
         This = this;
         foreach(var a in Squances)
         {

@@ -9,6 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 569317813045015681}
+  - component: {fileID: 8489192281547409465}
+  - component: {fileID: 6460636908418593584}
+  - component: {fileID: 4975753451358681918}
+  - component: {fileID: 2397919898526900378}
+  - component: {fileID: 5314625039416239325}
   m_Layer: 0
   m_Name: Couch_Mesh_Holder
   m_TagString: Untagged
@@ -32,6 +37,87 @@ Transform:
   - {fileID: 2862960569340858561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 123.98, z: 0}
+--- !u!65 &8489192281547409465
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711318264943736795}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10.578615, y: 14.131696, z: 11.252387}
+  m_Center: {x: 0.00973701, y: 0.35636282, z: -0.083782665}
+--- !u!114 &6460636908418593584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711318264943736795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d43ff9d791aa3a499d2a9b2885f3aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4975753451358681918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711318264943736795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538778505dad67a4b8521dfa526e70b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Listeners:
+    m_PersistentCalls:
+      m_Calls: []
+  log: 0
+--- !u!114 &2397919898526900378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711318264943736795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afdcba4c1035024483eba3cd8a0e9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pranked: 0
+  position: {x: 0, y: 0, z: 0}
+  prankTime: 5
+--- !u!114 &5314625039416239325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3711318264943736795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32c3c495b0b2684698d8d36258aa46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditionMet: 0
+  inform:
+    m_PersistentCalls:
+      m_Calls: []
+  prank: {fileID: 0}
 --- !u!1001 &2319914582165845802
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -22,11 +22,17 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
     [SerializeField] private int curMission = 0;
     [SerializeField] private int count = 0;
 
+    [SerializeField] private Animator anim;
+
     [Header("Movement")]
     [SerializeField] private float speed = 1.0f;
     private Context context;
 
+    void Awake()
+    {
+        anim = GetComponentInChildren<Animator>();
 
+    }
 
     void OnEnable()
     {
@@ -60,8 +66,10 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
         switch(task)
         {
             case tasks.Move:
-                if(moveTask.eUpdate() != Task.State.Running)
+                anim.SetBool("Walking", true);
+                if (moveTask.eUpdate() != Task.State.Running)
                 {
+                    anim.SetBool("Walking", false);
                     task = tasks.Interact;
                 }
                 break;
@@ -69,7 +77,6 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
             case tasks.Interact:
                 if (interactTask.eUpdate() != Task.State.Running)
                 {
-
                     task = tasks.Rapit;
                 }
                 break;

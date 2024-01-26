@@ -6,10 +6,15 @@ public class Move : Task
 {
     [SerializeField] public float speed;
     [SerializeField] public Vector3 Destination;
+    private float magnatued, old_magnatued;
     private Vector3 Velocity;
     protected override void OnStart()
     {
-        Velocity = Vector3.Normalize(Destination - context.transform.position) * speed;
+        Destination.y = context.transform.position.y;
+        magnatued = Vector3.Magnitude(Destination - context.transform.position);
+        old_magnatued = magnatued;
+        Vector3 LocalDis = Destination - context.transform.position;
+        Velocity = Vector3.Normalize(LocalDis) * speed;
     }
 
     protected override void OnStop()
@@ -19,15 +24,17 @@ public class Move : Task
 
     protected override State OnUpdate()
     {
-        if(Vector3.Magnitude(Destination - context.transform.position) > speed * Time.deltaTime)
-        {
-            context.transform.position += Velocity * Time.deltaTime;
-            return State.Running;
-        }
-        else
+        old_magnatued = magnatued;
+        magnatued = Vector3.Magnitude(Destination - context.transform.position);
+        if (magnatued - old_magnatued > 0 || magnatued < speed * Time.deltaTime)
         {
             context.transform.position = Destination;
             return State.Success;
+        }
+        else
+        {
+            context.transform.position += Velocity * Time.deltaTime;
+            return State.Running;
         }
     }
 }
