@@ -1210,7 +1210,7 @@ GameObject:
   - component: {fileID: 1767019770}
   m_Layer: 0
   m_Name: OldMan
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1234,6 +1234,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 60d775a32f4d1e244893e2f0e1bef6f3, type: 2}
   curMission: 0
   count: 0
+  anim: {fileID: 0}
   speed: 100
 --- !u!4 &1767019771
 Transform:
