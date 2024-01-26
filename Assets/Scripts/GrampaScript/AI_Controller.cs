@@ -7,7 +7,19 @@ using ScriptableObjects;
 public class AI_Controller : MonoBehaviour, GameEventListener<prank>
 {
 
+    enum tasks
+    { 
+        Idle,
+        Move,
+        Interact
+    }
+    [SerializeField] private Pranckable coutchPrank;
+    [SerializeField] private tasks task = tasks.Idle;
     [SerializeField] private List<GameEvent> EventList;
+    [SerializeField] private Move moveTask;
+    [SerializeField] private Interact interactTask;
+
+
 
     void OnEnable()
     {
@@ -25,7 +37,31 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
     }
     public void OnEventRaise(prank log)
     {
-        
+        task = tasks.Move;
+        moveTask.Destination = GameManager.This.mission[log.index].prank.point.transform.position;
+        interactTask.prank = GameManager.This.mission[log.index].prank;
     }
+
+    void Update()
+    {
+        switch(task)
+        {
+            case tasks.Move:
+                if(moveTask.eUpdate() != Task.State.Running)
+                {
+                    task = tasks.Interact;
+                }
+                break;
+
+            case tasks.Interact:
+                if (interactTask.eUpdate() != Task.State.Running)
+                {
+
+                    task = tasks.Idle;
+                }
+                break;
+
+        }
+    }    
 }
 

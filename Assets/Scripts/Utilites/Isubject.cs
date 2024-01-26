@@ -25,10 +25,6 @@ public class Isubject<T> : MonoBehaviour
     protected void Invoke()
     {
         Listeners.Invoke(log);
-        /*foreach(IObserver<T> a in Listeners)
-        {
-            a.Invoke(log);
-        }*/
     }
 }
 

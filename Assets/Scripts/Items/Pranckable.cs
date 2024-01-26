@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Pranckable : MonoBehaviour
 {
-    [SerializeField] private bool pranked = false;
+    [SerializeField] public bool pranked = false;
     [SerializeField] public GameObject point;
+
+    
 
     public bool interacked()
     {
