@@ -1,55 +1,54 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class PrankSequance : MonoBehaviour
+
+[System.Serializable]
+public class PrankSequance 
 {
-    // Define the event triggered when the entire sequence is completed
-    public event Action SequenceCompleted;
+    public Pranckable prank;
+    public List<Flag> boolList;
+    private int currentIndex = 0;
 
-    // List to hold dynamic number of observers
-    private List<Action> observers = new List<Action>();
-
-    // Internal state to track the sequence
-    private int sequenceIndex = 0;
-
-    private void Start()
+    public void Awake()
     {
-        // Subscribe to the sequence completion event
-        SequenceCompleted += OnSequenceCompleted;
-    }
-
-    // Subscribe an observer to the sequence
-    public void AddObserver(Action observer)
-    {
-        observers.Add(() =>
+        foreach (var a in boolList)
         {
-            if (sequenceIndex < observers.Count && observers[sequenceIndex] == observer)
+            a.inform.AddListener(checkSquance);
+        }
+    }
+    private bool InSquance()
+    {
+        for(int i = currentIndex+1;  i < boolList.Count; i++)
+        {
+            if(boolList[i].conditionMet != false)
             {
-                Debug.Log($"Observer {sequenceIndex + 1} invoked!");
-                sequenceIndex++;
-
-                if (sequenceIndex == observers.Count)
-                {
-                    SequenceCompleted?.Invoke();
-                }
+                currentIndex = 0;
+                return false;
             }
-        });
+        }
+        currentIndex++;
+        return true;
+    }
+    
+    public void checkSquance()
+    {
+        if(InSquance() == false)
+        {
+            foreach(var a in boolList)
+            {
+                a.resetFlag();
+            }
+        }
+        if(currentIndex == boolList.Count)
+        {
+            prank.pranked = true;
+            foreach (var a in boolList)
+            {
+                a.resetFlag();
+            }
+        }
     }
 
-    // Event handler for the sequence completion event
-    private void OnSequenceCompleted()
-    {
-        Debug.Log("Entire sequence completed! Returning true.");
-        // Do something when the entire sequence is completed
-        // For now, let's reset the sequence for the next run
-        ResetSequence();
-    }
-
-    // Reset the sequence for the next run
-    private void ResetSequence()
-    {
-        Debug.Log("Resetting sequence.");
-        sequenceIndex = 0;
-    }
 }
