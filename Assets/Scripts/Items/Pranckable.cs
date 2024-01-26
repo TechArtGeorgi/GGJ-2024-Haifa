@@ -8,12 +8,12 @@ public class Pranckable : MonoBehaviour
     [SerializeField] public Vector3 position;
     [SerializeField] public float prankTime = 5.0f;
     Timer prankTimer;
-    
+
 
     public bool interacked()
     {
-        if (pranked)    prank();
-        else            casual();
+        if (pranked) prank();
+        else casual();
 
         return pranked;
     }
@@ -26,6 +26,11 @@ public class Pranckable : MonoBehaviour
     public bool IsActive()
     {
         return prankTimer.IsTimerActive();
+    }
+
+    public void resetPrank()
+    {
+        pranked = false;
     }
 
     private void prank()
