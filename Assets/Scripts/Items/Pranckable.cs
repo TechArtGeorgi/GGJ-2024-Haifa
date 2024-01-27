@@ -42,6 +42,7 @@ public class Pranckable : MonoBehaviour
 
     private void prank()
     {
+        prankEvents.Invoke();
         Debug.Log("Grampa Got pranked by: " + this.gameObject.name);
         prankTimer.SetTimerTime(prankTime);
         prankTimer.ActivateTimer();
@@ -50,6 +51,7 @@ public class Pranckable : MonoBehaviour
 
     private void casual()
     {
+        CasualEvents.Invoke();
         Debug.Log("Grampa is interacting with : " + this.gameObject.name);
         prankTimer.SetTimerTime(prankTime);
         prankTimer.ActivateTimer();

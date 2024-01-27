@@ -72,8 +72,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Listeners:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 60d775a32f4d1e244893e2f0e1bef6f3, type: 2}
+        m_TargetAssemblyTypeName: ScriptableObjects.GameEvent, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   log: 0
+  gameEvent: {fileID: 11400000, guid: 575370748b2ec1c44b9fa51ba01d3c64, type: 2}
 --- !u!114 &5000701204456920519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,8 +100,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pranked: 0
-  position: {x: 0, y: 0, z: 0}
+  position: {x: 25.414583, y: 0, z: 61.092743}
   prankTime: 5
+  prankEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  CasualEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  PrankedSelect: 0
+  casualedPrankedSelect: 1
 --- !u!114 &4170479196671372656
 MonoBehaviour:
   m_ObjectHideFlags: 0
