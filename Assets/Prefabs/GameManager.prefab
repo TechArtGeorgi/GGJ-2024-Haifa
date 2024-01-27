@@ -51,7 +51,12 @@ MonoBehaviour:
       prank: {fileID: 0}
     - TaskName: Return to Sofa
       prank: {fileID: 0}
-    - TaskName: GoTo The TV
+  Squances:
+  - SquanceName: prankCoutch
+    squance:
       prank: {fileID: 0}
-  - MissionName: 
-    tasks: []
+      boolList:
+      - {fileID: 0}
+      - {fileID: 0}
+  OldMan: {fileID: 0}
+  MainTheme: {fileID: 11400000, guid: c056ecfce115c0043b36e9ba0cb81d7f, type: 2}

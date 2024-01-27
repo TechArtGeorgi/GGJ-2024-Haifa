@@ -8,6 +8,7 @@ public class Move : Task
     [SerializeField] public Vector3 Destination;
     private float magnatued, old_magnatued;
     private Vector3 Velocity;
+
     protected override void OnStart()
     {
         Destination.y = context.transform.position.y;
@@ -28,11 +29,13 @@ public class Move : Task
         magnatued = Vector3.Magnitude(Destination - context.transform.position);
         if (magnatued - old_magnatued > 0 || magnatued < speed * Time.deltaTime)
         {
+            context.animator.SetBool("Walking", false);
             context.transform.position = Destination;
             return State.Success;
         }
         else
         {
+            context.animator.SetBool("Walking", true);
             context.transform.position += Velocity * Time.deltaTime;
             return State.Running;
         }

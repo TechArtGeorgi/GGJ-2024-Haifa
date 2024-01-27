@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemFlag : MonoBehaviour
+public class ItemFlag : Flag
 {
-    // Start is called before the first frame update
-    void Start()
+    public void SetFlag()
     {
-        
+        conditionMet = true;
+        inform.Invoke();
     }
-
-    // Update is called once per frame
-    void Update()
+    protected override void CheckCondition()
     {
-        
+
     }
 }

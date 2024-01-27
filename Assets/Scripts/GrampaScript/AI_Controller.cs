@@ -28,12 +28,6 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
     [SerializeField] private float speed = 1.0f;
     private Context context;
 
-    void Awake()
-    {
-        anim = GetComponentInChildren<Animator>();
-
-    }
-
     void OnEnable()
     {
         context = Context.CreateFromGameObject(this.gameObject);
@@ -57,8 +51,12 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
         count = 0;
         curMission = log.index;
         task = tasks.Move;
+
+        moveTask.reset();
+        interactTask.reset();
+
         moveTask.Destination = GameManager.This.mission[curMission].tasks[count].prank.position;
-        interactTask.prank = GameManager.This.mission[curMission].tasks[count].prank;  
+        interactTask.prank = GameManager.This.mission[curMission].tasks[count].prank;
     }
 
     void Update()
@@ -66,10 +64,8 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
         switch(task)
         {
             case tasks.Move:
-                anim.SetBool("Walking", true);
                 if (moveTask.eUpdate() != Task.State.Running)
                 {
-                    anim.SetBool("Walking", false);
                     task = tasks.Interact;
                 }
                 break;
