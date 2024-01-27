@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pranked: 0
-  position: {x: 15.371561, y: 0, z: 71.249626}
+  position: {x: 3.8931713, y: 0, z: 50.567627}
   prankTime: 5
   prankEvents:
     m_PersistentCalls:
@@ -91,8 +91,9 @@ MonoBehaviour:
   CasualEvents:
     m_PersistentCalls:
       m_Calls: []
-  Pranked_Select: 0
-  Casual_Select: 1
+  flag: {fileID: 0}
+  Pranked_Select: 1
+  Casual_Select: 5
 --- !u!114 &5949918472917090041
 MonoBehaviour:
   m_ObjectHideFlags: 0

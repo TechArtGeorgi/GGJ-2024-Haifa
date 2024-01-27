@@ -108,8 +108,9 @@ MonoBehaviour:
   CasualEvents:
     m_PersistentCalls:
       m_Calls: []
+  flag: {fileID: 0}
   Pranked_Select: 0
-  Casual_Select: 1
+  Casual_Select: 4
 --- !u!114 &4170479196671372656
 MonoBehaviour:
   m_ObjectHideFlags: 0

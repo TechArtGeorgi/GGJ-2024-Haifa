@@ -40,7 +40,7 @@ public class PrankSequance
             {
                 a.resetFlag();
             }
-            return;
+            //return;
         }
 
         if(InSquance() == false)
@@ -49,7 +49,7 @@ public class PrankSequance
             {
                 a.resetFlag();
             }
-            return;
+            //return;
         }
         if(currentIndex == boolList.Count)
         {
