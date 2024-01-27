@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f9a32e7ee165ec24aa8e005fa2b12b1d, type: 2}
     - target: {fileID: 919132149155446097, guid: e3f1058c930b7ef479f7b2edcee00f94, type: 3}
       propertyPath: m_Name
-      value: Stairs_)Mesh
+      value: Stairs_Mesh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
