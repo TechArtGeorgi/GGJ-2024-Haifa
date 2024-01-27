@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pranked: 0
-  position: {x: -34.825287, y: 0, z: 85.682396}
+  position: {x: -19.261358, y: 0, z: 71.061905}
   prankTime: 5
   prankEvents:
     m_PersistentCalls:

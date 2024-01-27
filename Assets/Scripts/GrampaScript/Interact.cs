@@ -20,7 +20,7 @@ public class Interact : Task
 
     protected override void OnStop()
     {
-        reset();
+
     }
 
     protected override State OnUpdate()

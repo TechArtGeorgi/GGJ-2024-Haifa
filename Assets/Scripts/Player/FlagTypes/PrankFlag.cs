@@ -12,7 +12,7 @@ public class PrankFlag : Flag
     }
     protected override void CheckCondition()
     {
-        if (prank != null)
+        /*if (prank != null)
         {
             flagSwitch.Update(prank.IsActive());
             if (flagSwitch.OnPress())
@@ -20,6 +20,6 @@ public class PrankFlag : Flag
                 conditionMet = true;
                 inform.Invoke();
             }
-        }
+        }*/
     }
 }

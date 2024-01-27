@@ -28,6 +28,9 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
     [SerializeField] private float speed = 1.0f;
     private Context context;
 
+    private SmartSwitch DebugSwitch;
+    private tasks Oldtask = tasks.Idle;
+
     void OnEnable()
     {
         context = Context.CreateFromGameObject(this.gameObject);
@@ -61,12 +64,17 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
 
     void Update()
     {
+        DebugSwitch.Update(task == Oldtask);
+        if(DebugSwitch.OnPress())
+            Debug.Log(task.ToString());
+
         switch(task)
         {
             case tasks.Move:
                 if (moveTask.eUpdate() != Task.State.Running)
                 {
                     task = tasks.Interact;
+                    moveTask.reset();
                 }
                 break;
 
@@ -74,6 +82,7 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
                 if (interactTask.eUpdate() != Task.State.Running)
                 {
                     task = tasks.Rapit;
+                    interactTask.reset();
                 }
                 break;
             case tasks.Rapit:
@@ -94,6 +103,7 @@ public class AI_Controller : MonoBehaviour, GameEventListener<prank>
                 break;
 
         }
+        Oldtask = task;
     }    
 }
 

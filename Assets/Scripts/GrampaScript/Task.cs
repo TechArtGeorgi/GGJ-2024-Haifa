@@ -25,6 +25,7 @@ public abstract class Task
         taskSwitch.Update(state == State.Running);
         if (taskSwitch.OnPress())
         {
+            Debug.Log("StartTask "+ToString());
             OnStart();
         }
         if (taskSwitch.OnHold())
