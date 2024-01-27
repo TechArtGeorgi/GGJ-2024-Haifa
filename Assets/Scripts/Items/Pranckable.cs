@@ -9,10 +9,17 @@ public class Pranckable : MonoBehaviour
     [SerializeField] private UnityEvent prankEvents;
     [SerializeField] private UnityEvent CasualEvents;
 
+    [SerializeField] private PrankFlag flag;
+
     [Header("Animtion")]
     [SerializeField] private int Pranked_Select = 0;
     [SerializeField] private int Casual_Select = 1;
     Timer prankTimer;
+
+    private void Awake()
+    {
+        flag = GetComponent<PrankFlag>();
+    }
 
     public bool interacked( out int casuel_select, out int prank_select)
     {
@@ -20,6 +27,7 @@ public class Pranckable : MonoBehaviour
         else casual();
         casuel_select = Casual_Select; 
         prank_select = Pranked_Select;
+        flag.SetFlag();
         return pranked;
     }
 

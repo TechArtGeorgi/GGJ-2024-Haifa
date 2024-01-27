@@ -86,17 +86,30 @@ MonoBehaviour:
     - TaskName: Return to Sofa
       prank: {fileID: 0}
   Squances:
-  - SquanceName: prankCoutch
+  - SquanceName: PhartBag
     squance:
       prank: {fileID: 0}
       boolList:
       - {fileID: 0}
       - {fileID: 0}
-  - SquanceName: TV_Prank
+  - SquanceName: Hallowing Mask
     squance:
       prank: {fileID: 0}
       boolList:
       - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+  - SquanceName: Banana
+    squance:
+      prank: {fileID: 0}
+      boolList:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+  - SquanceName: MouseTrap
+    squance:
+      prank: {fileID: 0}
+      boolList:
       - {fileID: 0}
       - {fileID: 0}
   OldMan: {fileID: 0}
