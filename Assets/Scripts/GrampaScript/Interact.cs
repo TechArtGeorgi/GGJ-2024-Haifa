@@ -6,9 +6,16 @@ public class Interact : Task
 {
     [SerializeField] public Pranckable prank;
     SmartSwitch stateSwitch;
+    [SerializeField] private int causal, pranked;
     protected override void OnStart()
     {
-        prank.interacked();
+        stateSwitch.Update(false);
+        stateSwitch.Update(false);
+        if (prank.interacked(out causal, out pranked))
+            context.animator.SetInteger("Select", pranked);
+        else
+            context.animator.SetInteger("Select", causal);
+        context.animator.SetTrigger("Special");
     }
 
     protected override void OnStop()
@@ -18,8 +25,8 @@ public class Interact : Task
 
     protected override State OnUpdate()
     {
-        stateSwitch.Update(prank.IsActive());
-        if(stateSwitch.OnRelese())
+        stateSwitch.Update(context.animator.GetCurrentAnimatorStateInfo(0).IsTag("Special"));
+        if (stateSwitch.OnRelese())
         {
             return State.Success;
         }

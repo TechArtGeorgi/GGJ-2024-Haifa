@@ -873,6 +873,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4459550244050359048}
   - component: {fileID: 1195207988844598669}
+  - component: {fileID: 3571006203918599514}
+  - component: {fileID: 8526522726830788556}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -907,7 +909,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0ae8aaa35574b564480003fe84774d45, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -917,6 +919,45 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3571006203918599514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4000238715495796717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac008baf26cd0445b84eb38e734d057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1195207988844598669}
+--- !u!114 &8526522726830788556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4000238715495796717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b46416e09263c184189da70653eca522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coutchPrank: {fileID: 0}
+  task: 0
+  EventList:
+  - {fileID: 11400000, guid: 60d775a32f4d1e244893e2f0e1bef6f3, type: 2}
+  - {fileID: 11400000, guid: cd8846d74dce3da4ba419b4214155c8a, type: 2}
+  - {fileID: 11400000, guid: 6032998dd0548d641a388faf59ce1ac5, type: 2}
+  - {fileID: 11400000, guid: 4dfa86e2b92fe8545a654c048d063dd0, type: 2}
+  - {fileID: 11400000, guid: 7c51bcfbbef7c304d965760d4422c64f, type: 2}
+  - {fileID: 11400000, guid: 575370748b2ec1c44b9fa51ba01d3c64, type: 2}
+  - {fileID: 11400000, guid: 45a57067ec95f6c44932e8126449ffd6, type: 2}
+  curMission: 0
+  count: 0
+  anim: {fileID: 0}
+  speed: 30
 --- !u!1 &4119755258419561598
 GameObject:
   m_ObjectHideFlags: 0

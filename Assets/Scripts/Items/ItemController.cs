@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
+using ScriptableObjects;
 
 public class ItemController : Isubject<int>
 {
     AnimationsUti uti;
+    [SerializeField] private GameEvent gameEvent;
 
     private void Awake()
     {
@@ -20,7 +22,7 @@ public class ItemController : Isubject<int>
     {
         Debug.Log("GameObject :" + this.gameObject.ToString() + " Is Selected");
         if (uti != null) uti.PlayScaleInAnimation();
-        Invoke();
+        gameEvent.Invoke();
     }
     public void OnReleced()
     {
