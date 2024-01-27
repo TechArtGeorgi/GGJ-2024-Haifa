@@ -74,6 +74,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   log: 0
+  gameEvent: {fileID: 11400000, guid: 4dfa86e2b92fe8545a654c048d063dd0, type: 2}
 --- !u!114 &3312037789398219649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,8 +88,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pranked: 0
-  position: {x: 0, y: 0, z: 0}
+  position: {x: -34.825287, y: 0, z: 85.682396}
   prankTime: 5
+  prankEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  CasualEvents:
+    m_PersistentCalls:
+      m_Calls: []
+  Pranked_Select: 0
+  Casual_Select: 1
 --- !u!114 &1039905427364615981
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -45,7 +45,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mission:
-  - MissionName: Window Prank Mission
+  - MissionName: Couch
+    tasks:
+    - TaskName: Couch
+      prank: {fileID: 0}
+  - MissionName: Lamp
+    tasks:
+    - TaskName: Lamp
+      prank: {fileID: 0}
+    - TaskName: Return to Sofa
+      prank: {fileID: 0}
+  - MissionName: Library
+    tasks:
+    - TaskName: Library
+      prank: {fileID: 0}
+    - TaskName: Return to Sofa
+      prank: {fileID: 0}
+  - MissionName: Photos
+    tasks:
+    - TaskName: Photos
+      prank: {fileID: 0}
+    - TaskName: Return to Sofa
+      prank: {fileID: 0}
+  - MissionName: Table
+    tasks:
+    - TaskName: Table
+      prank: {fileID: 0}
+    - TaskName: Return to Sofa
+      prank: {fileID: 0}
+  - MissionName: TV
+    tasks:
+    - TaskName: TV
+      prank: {fileID: 0}
+    - TaskName: Return to Sofa
+      prank: {fileID: 0}
+  - MissionName: Window
     tasks:
     - TaskName: Window
       prank: {fileID: 0}
@@ -58,5 +92,13 @@ MonoBehaviour:
       boolList:
       - {fileID: 0}
       - {fileID: 0}
+  - SquanceName: TV_Prank
+    squance:
+      prank: {fileID: 0}
+      boolList:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
   OldMan: {fileID: 0}
   MainTheme: {fileID: 11400000, guid: c056ecfce115c0043b36e9ba0cb81d7f, type: 2}
+  LafthSlider: {fileID: 0}

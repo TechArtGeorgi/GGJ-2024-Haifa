@@ -108,8 +108,8 @@ MonoBehaviour:
   CasualEvents:
     m_PersistentCalls:
       m_Calls: []
-  PrankedSelect: 0
-  casualedPrankedSelect: 1
+  Pranked_Select: 0
+  Casual_Select: 1
 --- !u!114 &5314625039416239325
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -666,6 +666,10 @@ PrefabInstance:
       value: LaughterSliderHolder
       objectReference: {fileID: 0}
     - target: {fileID: 8739729810320816419, guid: 3b8fb224fae7bce479fb54ee7a173174, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739729810320816419, guid: 3b8fb224fae7bce479fb54ee7a173174, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}

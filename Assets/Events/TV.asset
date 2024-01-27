@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TV
   m_EditorClassIdentifier: 
   log:
-    index: 1
+    index: 5
     gameEvent: {fileID: 11400000}
   position: {x: -32.186962, y: 0, z: 58.37642}

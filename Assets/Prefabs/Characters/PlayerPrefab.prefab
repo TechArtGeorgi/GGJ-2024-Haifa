@@ -947,8 +947,13 @@ MonoBehaviour:
   coutchPrank: {fileID: 0}
   task: 0
   EventList:
-  - {fileID: 11400000, guid: 45a57067ec95f6c44932e8126449ffd6, type: 2}
   - {fileID: 11400000, guid: 60d775a32f4d1e244893e2f0e1bef6f3, type: 2}
+  - {fileID: 11400000, guid: cd8846d74dce3da4ba419b4214155c8a, type: 2}
+  - {fileID: 11400000, guid: 6032998dd0548d641a388faf59ce1ac5, type: 2}
+  - {fileID: 11400000, guid: 4dfa86e2b92fe8545a654c048d063dd0, type: 2}
+  - {fileID: 11400000, guid: 7c51bcfbbef7c304d965760d4422c64f, type: 2}
+  - {fileID: 11400000, guid: 575370748b2ec1c44b9fa51ba01d3c64, type: 2}
+  - {fileID: 11400000, guid: 45a57067ec95f6c44932e8126449ffd6, type: 2}
   curMission: 0
   count: 0
   anim: {fileID: 0}
