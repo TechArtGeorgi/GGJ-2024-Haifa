@@ -6,9 +6,14 @@ public abstract class Flag : MonoBehaviour
 {
     // The flag indicating whether the condition is met
     public bool conditionMet = false;
-    public UnityEvent inform;
+    public UnityEvent<Flag> inform;
     protected SmartSwitch flagSwitch;
 
+    public void SetFlag()
+    {
+        conditionMet = true;
+        inform.Invoke(this);
+    }
 
     public virtual void resetFlag()
     {
@@ -23,7 +28,7 @@ public abstract class Flag : MonoBehaviour
     // Method to update the flag based on the condition
     protected void UpdateFlag()
     {
-        CheckCondition();
+        //CheckCondition();
         // You can add additional logic here if needed
     }
 

@@ -32,14 +32,24 @@ public class PrankSequance
         return true;
     }
     
-    public void checkSquance()
+    public void checkSquance(Flag f)
     {
+        if(f.conditionMet == true)
+        {
+            foreach (var a in boolList)
+            {
+                a.resetFlag();
+            }
+            //return;
+        }
+
         if(InSquance() == false)
         {
             foreach(var a in boolList)
             {
                 a.resetFlag();
             }
+            //return;
         }
         if(currentIndex == boolList.Count)
         {
