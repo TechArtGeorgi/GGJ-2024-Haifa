@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36dbcce1c3d1e964b9681323eb2c42a4, type: 3}
   m_Name: GrampaGroule
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: d872fe98069b6cb44a57cc406e554de6, type: 3}
   volume: {x: 0.5, y: 0.5}
-  pitch: {x: 1, y: 1}
+  pitch: {x: 0.8, y: 0.8}
   playOrder: 0
   playIndex: 0

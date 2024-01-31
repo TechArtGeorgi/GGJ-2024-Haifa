@@ -1,5 +1,7 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
+
 
 /*public class PranckableEditor : MonoBehaviour
 {
@@ -71,3 +73,4 @@ public class PranckableEditor : Editor
 }
 
 
+#endif

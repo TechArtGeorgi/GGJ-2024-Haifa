@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text.RegularExpressions;
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 
@@ -65,3 +62,4 @@ public class PathFollowDebugger : Editor
         // Handles.DrawLines(new[] { be.startPoint, be.middlePoint, be.endPoint });
     }
 }
+#endif
