@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjects;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
         if (LafthSlider.value >= 0.99f)
         {
             Debug.Log("You Win");
+            SceneManager.LoadScene("Credits");
         }
     }
 }

@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using ScriptableObjects;
@@ -19,3 +20,4 @@ public class SoundEffectsCustomEditor : Editor
         }
     }
 }
+#endif
