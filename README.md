@@ -11,5 +11,6 @@ You, as the player, need to cheer the kid up by planting various pranks around t
 Like every good prank, timing is the key to success. Click on the various objects around the house to make the grandpa interact with them and set your traps when he's not looking. Happy pranking :)
 
 # Screen Shots
-![Image_1](https://ggj.s3.amazonaws.com/styles/game_content__wide/games/screenshots/2023/02/77497/screenshot3_0.png?itok=bnPWcDam&timestamp=1675599610)
-![Image_2](https://ggj.s3.amazonaws.com/styles/game_content__wide/games/screenshots/2023/02/77497/screenshot2_1.png?itok=jSGDui-4&timestamp=1675599610)
+![Image_1](https://github.com/TechArtGeorgi/GGJ-2024-Haifa/blob/Master/GrampaAndMe.PNG?raw=true)
+![Image_2](https://github.com/TechArtGeorgi/GGJ-2024-Haifa/blob/Master/GrampaAndMeGame.PNG?raw=true)
+![Image_2](https://github.com/TechArtGeorgi/GGJ-2024-Haifa/blob/Master/GrampaAndMeCredits.PNG?raw=true)
